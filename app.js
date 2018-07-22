@@ -1,6 +1,5 @@
 const express = require('express');
 const morgan = require('morgan');
-//const postBank = require("./postBank");
 const postList = require('./views/postList');
 const postDetails = require('./views/postDetails');
 const client = require('./db');
@@ -107,3 +106,6 @@ const PORT = process.env.PORT || 1337;
 app.listen(PORT, () => {
 	console.log(`App listening in port ${PORT}`);
 });
+
+
+module.exports = app;

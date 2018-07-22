@@ -1,7 +1,10 @@
 const pg = require('pg');
 const { Client } = require('pg')
 
-const client = new Client(process.env.DATABASE_URL);
+
+const dbURL = process.env.DATABASE_URL || 'postgres://localhost/wnews';
+
+const client = new Client(dbURL);
 client.connect();
 
 
