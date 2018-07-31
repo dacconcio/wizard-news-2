@@ -3,8 +3,10 @@ const morgan = require('morgan');
 const postList = require('./views/postList');
 const postDetails = require('./views/postDetails');
 const client = require('./db');
-
 const app = express();
+
+
+app.use(express.urlencoded({ extended: false }));
 
 app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
